@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		event litchener in java script
+	</title>
+</head>
+<body>
+<button type="button" id="btn">Click</button>
+	<script>
+		document.getElementById("btn").addEventListener('click',(x,y)=>
+		{
+			var x=Number(prompt("Enter Number one:"));
+			var y=Number(prompt("Enter Number two:"));
+
+			var z = x+y;
+			alert("Total is"+z);
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Image obj in java script
+	</title>
+	<style>
+		.result 
+		{
+			font-size: 18;
+			font-weight: bold;
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="result">
+
+		
+	</div>
+	<button type="button" class="btn">See Notice</button>
+	<h4>*** click the button see above load the notice***</h4>
+
+	<script>
+		var resele =document.querySelector(".result");//query seletcor ar kaj class dora full div jodi getelementclass dia dortam tahola only class dorto
+		var btnele =document.querySelector(".btn");
+		var newimage = new Image(500,300);//Image build obj
+		newimage.src = "image1.jpg";
+//click event ar kaj,
+		btnele.addEventListener('click',()=>
+		{
+			resele.appendChild(newimage);
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Build in obj in js
+	</title>
+</head>
+<body>
+<!-- <script>
+	//date obj.................
+	var dt = new Date();
+	alert(dt);
+	
+
+
+var time = new Date();
+time.getTime();
+	alert(time);
+
+
+	var birth = new Date(1998,11,31);
+	birth.getMonth();
+alert(birth);
+
+</script> -->
+
+Current Time:<span id="time"></span><br>
+<button type="button" onclick="stop()">STOP</button>
+<button type="button" onclick="start()">START</button>
+<script>
+
+window.onload = function() //animious function ba auto function j nije nijei call hoy
+{
+	getTime();
+}
+function getTime()
+{
+	var today = new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();
+
+	m=checkTime(m);
+	s=checkTime(s);
+
+	
+
+document.getElementById('time').innerHTML=h+":"+m+":"+s;
+}
+var x = setInterval('getTime()',1000);
+
+function checkTime(i)
+{
+	if(i<10)
+	{
+		i="0"+i;
+	}
+	return i;
+
+}
+
+function stop()
+{
+	clearInterval(x);
+}
+
+function start()
+{
+	setInterval('getTime()',1000);
+}
+
+
+</script>
+</body>
+</html>
